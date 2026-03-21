@@ -5,21 +5,21 @@
 class Apex < Formula
   desc "AI-powered software delivery agent"
   homepage "https://github.com/Inventeer/apex"
-  version "0.2.17"
+  version "0.2.18"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Inventeer/apex-releases/releases/download/v0.2.17/apex_0.2.17_darwin_amd64.tar.gz"
-      sha256 "df0de4f0c359a572f57fcedc840f803f4d88c1e4dc476a976298137b7ac67666"
+      url "https://github.com/Inventeer/apex-releases/releases/download/v0.2.18/apex_0.2.18_darwin_amd64.tar.gz"
+      sha256 "647c2e34be0c88ba046fd179301ddc6dc6c07d38577d107793abcf2c00d63105"
 
       define_method(:install) do
         bin.install "apex"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Inventeer/apex-releases/releases/download/v0.2.17/apex_0.2.17_darwin_arm64.tar.gz"
-      sha256 "589bfd3fa20341ade73856d413e488d7a5450d504b6e1352a378b9a5f4e3c872"
+      url "https://github.com/Inventeer/apex-releases/releases/download/v0.2.18/apex_0.2.18_darwin_arm64.tar.gz"
+      sha256 "46efa3e955ea8ba4e366c8ca59ed276738a12ec5d9e02900c5610f33b14e735d"
 
       define_method(:install) do
         bin.install "apex"
@@ -29,15 +29,15 @@ class Apex < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Inventeer/apex-releases/releases/download/v0.2.17/apex_0.2.17_linux_amd64.tar.gz"
-      sha256 "47fdfda105d7175a86105b30110d3512e80277eb3f7aa95cc819fdc7a3daea11"
+      url "https://github.com/Inventeer/apex-releases/releases/download/v0.2.18/apex_0.2.18_linux_amd64.tar.gz"
+      sha256 "dd9df4cb2093be463e7fbf07c995253f1516bd21155f2eb55c5ff113610c0ba7"
       define_method(:install) do
         bin.install "apex"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Inventeer/apex-releases/releases/download/v0.2.17/apex_0.2.17_linux_arm64.tar.gz"
-      sha256 "de993458735a5c7e9bd3f22fb2c65b45f7512a1cc2e3934f4ab7be9eaba53405"
+      url "https://github.com/Inventeer/apex-releases/releases/download/v0.2.18/apex_0.2.18_linux_arm64.tar.gz"
+      sha256 "ab69e062df705f0e99e75bb76deebf847297c6f778d56beddf6552bde4daace4"
       define_method(:install) do
         bin.install "apex"
       end
