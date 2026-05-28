@@ -11,7 +11,7 @@ class Apex < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/Inventeer/apex-releases/releases/download/v0.14.0/apex_0.14.0_darwin_amd64.tar.gz"
-      sha256 "c209a9bd149e54beddb150bc08d78f3cc03081710d8eaed055f863f99642192a"
+      sha256 "5b798a3a5a5bc4c2f50c828562cda0068db8b5319070d134af9db64ad0f0b651"
 
       define_method(:install) do
         bin.install "apex"
@@ -19,7 +19,7 @@ class Apex < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/Inventeer/apex-releases/releases/download/v0.14.0/apex_0.14.0_darwin_arm64.tar.gz"
-      sha256 "90c70b59ae5e658de6b403dec47112769c96538ec3acd7e28bae754a4136f215"
+      sha256 "ca79556f3021f52464a3002d9f0002562df106dc7340ae587a98d124f5768a41"
 
       define_method(:install) do
         bin.install "apex"
@@ -30,14 +30,14 @@ class Apex < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/Inventeer/apex-releases/releases/download/v0.14.0/apex_0.14.0_linux_amd64.tar.gz"
-      sha256 "e6f022eba765a0e7958ead40e46e8379b4ee519e36811aecf577026f68d4df70"
+      sha256 "ff01e98a47d09f2027ad256988032efddfc613a6ed6938db6b2e980f42a6ee4d"
       define_method(:install) do
         bin.install "apex"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/Inventeer/apex-releases/releases/download/v0.14.0/apex_0.14.0_linux_arm64.tar.gz"
-      sha256 "6ce5d91353cbc8b2fe4723a5f2b530b96cbab45461eee8a5b7b3da22fb11a5cc"
+      sha256 "008844b75f36185a9d4b916504ade0705e931e240920c28b3f137f73dadb5fe9"
       define_method(:install) do
         bin.install "apex"
       end
