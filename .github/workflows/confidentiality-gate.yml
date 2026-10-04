@@ -1,0 +1,27 @@
+name: Confidentiality Gate
+
+# TEST ONLY (INV-5135): proves a public repository gets a verdict from the
+# confidentiality gate with a tier ceiling of open. Not to be merged; calling
+# the gate as a required check here belongs to INV-5122.
+
+on:
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: confidentiality-gate-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  gate:
+    uses: Inventeer/tool-confidentiality-gate/.github/workflows/confidentiality-gate.yml@main
+    with:
+      hub_reader_app_id: ${{ vars.HUB_READER_APP_ID }}
+      allow_sensitivity: "O"
+      max_tier: open
+      company_tenant_direction: none
+    secrets:
+      HUB_READER_APP_PRIVATE_KEY: ${{ secrets.HUB_READER_APP_PRIVATE_KEY }}
