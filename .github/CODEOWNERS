@@ -1,0 +1,8 @@
+# Every path has a code owner team that can write to this repo, which the
+# confidentiality gate's code-owner check requires. Owners are teams, never
+# people (INV_Access_Management_SOP). Owners follow INV_Area_Ownership_Map:
+# the accountable Area's team where it holds write here, otherwise a team
+# that does. The last matching line wins.
+
+# Default: Development, accountable for this repo (its manifest owner).
+* @Inventeer/area-dev-labs
