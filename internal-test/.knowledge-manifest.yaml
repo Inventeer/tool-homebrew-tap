@@ -1,0 +1,10 @@
+# TEST ONLY (INV-5135): a folder above the base tier, which a public repo must refuse.
+schema_version: "1.0"
+sensitivity: O
+audience:
+  tenant: inventeer
+  tier: maintainer
+inherit: true
+owner: DEV
+effective_date: 2026-10-03
+notes: "Test fixture for the tier ceiling; never merged."
